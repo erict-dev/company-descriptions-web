@@ -4,7 +4,10 @@ export default async function handler(req, res) {
     const response = await fetch(`https://finance.yahoo.com/quote/${ticker}/`);
     const html = await response.text();
     const match = html.match(/"longBusinessSummary":"(.+?)\.",/);
-    return match[1];
+    return (
+      (match && match[1]) ||
+      `⚠️  ERROR: Company description for ${ticker} not found. Is the stock symbol accurate?`
+    );
   };
 
   const fetchCompanyDescriptions = async () => {

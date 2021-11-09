@@ -44,19 +44,19 @@ export default function Home() {
         <title>Company Descriptions</title>
         <meta
           name="description"
-          content="Easily compile company descriptions based on stock ticker"
+          content="Easily compile company descriptions based on stock symbols"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h2 className={styles.description}>
-          Get company descriptions based on stock tickers.
+          Get company descriptions based on stock symbols.
         </h2>
 
         <Form className={styles.form} onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicText">
-            <Form.Label>Stock tickers</Form.Label>
+            <Form.Label>Stock symbols</Form.Label>
             <Form.Control
               type="text"
               placeholder="MSFT,SHOP,MRNA,PFE"
