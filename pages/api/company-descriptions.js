@@ -1,6 +1,4 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { JSDOM } from "jsdom";
-
 export default async function handler(req, res) {
   const getTickerDescription = async (ticker) => {
     const response = await fetch(`https://finance.yahoo.com/quote/${ticker}/`);
