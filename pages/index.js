@@ -14,7 +14,7 @@ export default function Home() {
 
   const fetchCompanyDescriptions = async () => {
     const query = companies;
-    const data = await fetch(`/api/hello?tickers=${query}`);
+    const data = await fetch(`/api/company-descriptions?tickers=${query}`);
     const json = await data.json();
     setCompanyDescriptions(json);
   };
